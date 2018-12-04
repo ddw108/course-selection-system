@@ -2,7 +2,9 @@ package com.ddw.courseselectionsystem.controller;
 
 import com.ddw.courseselectionsystem.result.ErrorMsg;
 import com.ddw.courseselectionsystem.result.Result;
+import com.ddw.courseselectionsystem.service.DemoService;
 import io.swagger.annotations.Api;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/demo")
 public class DemoController {
 
+    @Autowired
+    private DemoService demoService;
+
     @RequestMapping(value = "/success", method = RequestMethod.GET)
     public Result<String> success(){
         return Result.success("Hello");
@@ -27,6 +32,12 @@ public class DemoController {
     @RequestMapping(value = "/error", method = RequestMethod.GET)
     public Result<String> error(){
         return Result.error(ErrorMsg.SERVER_ERROR);
+    }
+
+    @RequestMapping(value = "/student", method = RequestMethod.GET)
+    public Result<String> getAll(){
+        String data = demoService.getAll().toString();
+        return Result.success(data);
     }
 
 }
