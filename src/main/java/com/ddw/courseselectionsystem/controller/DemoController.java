@@ -1,5 +1,6 @@
 package com.ddw.courseselectionsystem.controller;
 
+import com.ddw.courseselectionsystem.model.Student;
 import com.ddw.courseselectionsystem.result.ErrorMsg;
 import com.ddw.courseselectionsystem.result.Result;
 import com.ddw.courseselectionsystem.service.DemoService;
@@ -8,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * 测试Controller
@@ -35,9 +38,9 @@ public class DemoController {
     }
 
     @RequestMapping(value = "/student", method = RequestMethod.GET)
-    public Result<String> getAll(){
-        String data = demoService.getAll().toString();
-        return Result.success(data);
+    public Result<List<Student>> getAll(){
+        List<Student> students = demoService.getAll();
+        return Result.success(students);
     }
 
 }
