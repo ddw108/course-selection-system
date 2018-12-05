@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * 类注释，描述
+ * 测试服务类
  *
  * @author dengdingwwen
  * @version $Id: DemoService.java,v 1.0 2018/12/4 17:51 dengdingwwen

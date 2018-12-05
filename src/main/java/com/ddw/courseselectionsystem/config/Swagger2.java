@@ -11,7 +11,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * 类注释，描述
+ * Swagger的配置
  *
  * @author dengdingwwen
  * @version $Id: Swagger2.java,v 1.0 2018/12/4 15:54 dengdingwwen

@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * 类注释，描述
+ * 学生的po类
  *
  * @author dengdingwwen
  * @version $Id: Student.java,v 1.0 2018/12/4 17:46 dengdingwwen
