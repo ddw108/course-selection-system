@@ -2,6 +2,7 @@ package com.ddw.courseselectionsystem.config.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
@@ -12,6 +13,7 @@ import redis.clients.jedis.JedisPoolConfig;
  * @version $Id: RedisPoolFactory.java,v 1.0 2018/12/5 11:08 dengdingwwen
  * @date 2018/12/5 11:08
  */
+@Service
 public class RedisPoolFactory {
 
     @Autowired
